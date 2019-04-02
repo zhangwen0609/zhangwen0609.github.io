@@ -3,19 +3,23 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
-  <title>hello11111111111 | 张雯</title>
+  <title>CSS样式初始化 | 张雯</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="MinHow,Zhangwen's Blog">
   
-  <meta property="og:type" content="article">
-<meta property="og:title" content="hello11111111111">
-<meta property="og:url" content="http://yoursite.com/2019/03/27/hello11111111111/index.html">
+  <meta name="description" content="建站老手都知道，这是为了考虑到浏览器的兼容问题，其实不同浏览器对有些标签的默认值是不同的，如果没对CSS初始化往往会出现浏览器之间的页面差异。当然，初始化样式会对SEO有一定的影响，但鱼和熊掌不可兼得，但力求影响最小的情况下初始化。">
+<meta name="keywords" content="为什么要初始化CSS,雅虎工程师提供的CSS初始化示例代码">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS样式初始化">
+<meta property="og:url" content="http://yoursite.com/2019/04/02/CSS样式初始化/index.html">
 <meta property="og:site_name" content="张雯">
+<meta property="og:description" content="建站老手都知道，这是为了考虑到浏览器的兼容问题，其实不同浏览器对有些标签的默认值是不同的，如果没对CSS初始化往往会出现浏览器之间的页面差异。当然，初始化样式会对SEO有一定的影响，但鱼和熊掌不可兼得，但力求影响最小的情况下初始化。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-27T13:26:05.852Z">
+<meta property="og:updated_time" content="2019-04-02T02:22:46.393Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hello11111111111">
+<meta name="twitter:title" content="CSS样式初始化">
+<meta name="twitter:description" content="建站老手都知道，这是为了考虑到浏览器的兼容问题，其实不同浏览器对有些标签的默认值是不同的，如果没对CSS初始化往往会出现浏览器之间的页面差异。当然，初始化样式会对SEO有一定的影响，但鱼和熊掌不可兼得，但力求影响最小的情况下初始化。">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -106,20 +110,27 @@
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap"><article id="post-hello11111111111" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main" class="body-wrap"><article id="post-CSS样式初始化" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="post-title" itemprop="name">
-      hello11111111111
+      CSS样式初始化
     </h1>
     <div class="post-title-bar">
       <ul>
           
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/CSS/">CSS</a>
+                  
+              </li>
+          
         <li>
-          <i class="fa fa-calendar"></i>  2019-03-27
+          <i class="fa fa-calendar"></i>  2019-04-02
         </li>
         <li>
           <i class="fa fa-eye"></i>
@@ -135,11 +146,22 @@
     <div class="article-entry post-content" itemprop="articleBody">
       
             
-            
+            <p> 建站老手都知道，这是为了考虑到浏览器的兼容问题，其实不同浏览器对有些标签的默认值是不同的，如果没对CSS初始化往往会出现浏览器之间的页面差异。当然，初始化样式会对SEO有一定的影响，但鱼和熊掌不可兼得，但力求影响最小的情况下初始化。<br><a id="more"></a><br>为什么要初始化CSS？<br>      建站老手都知道，这是为了考虑到浏览器的兼容问题，其实不同浏览器对有些标签的默认值是不同的，如果没对CSS初始化往往会出现浏览器之间的页面差异。当然，初始化样式会对SEO有一定的影响，但鱼和熊掌不可兼得，但力求影响最小的情况下初始化。</p>
+<pre><code>最简单的初始化方法就是： * {padding: 0; margin: 0;} 。有很多人也是这样写的。这确实很简单，但有人就会感到疑问：*号这样一个通用符在编写代码的时候是快，但如果网站很大，CSS样式表文件很大，这样写的话，他会把所有的标签都初始化一遍，这样就大大的加强了网站运行的负载，会使网站加载的时候需要很长一段时间。
+
+写过css的都知道每个网页引进的css首先都需要初始化，而出名的css reset有YUI css reset（QQ、淘宝等都出现他的影子），业内用的最多的还有Erik Meyer’s CSS Reset。
+
+CSS初始化是指重设浏览器的样式。不同的浏览器默认的样式可能不尽相同，所以开发时的第一件事可能就是如何把它们统一。如果没对CSS初始化往往会出现浏览器之间的页面差异。每次新开发网站或新网页时候通过初始化CSS样式的属性，为我们将用到的CSS或html标签更加方便准确，使得我们开发网页内容时更加方便简洁，同时减少CSS代码量，节约网页下载时间。
+</code></pre><p>雅虎工程师提供的CSS初始化示例代码<br>body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td { margin:0; padding:0; }<br>body { background:#fff; color:#555; font-size:14px; font-family: Verdana, Arial, Helvetica, sans-serif; }<br>td,th,caption { font-size:14px; }<br>h1, h2, h3, h4, h5, h6 { font-weight:normal; font-size:100%; }<br>address, caption, cite, code, dfn, em, strong, th, var { font-style:normal; font-weight:normal;}<br>a { color:#555; text-decoration:none; }<br>a:hover { text-decoration:underline; }<br>img { border:none; }<br>ol,ul,li { list-style:none; }<br>input, textarea, select, button { font:14px Verdana,Helvetica,Arial,sans-serif; }<br>table { border-collapse:collapse; }<br>html {overflow-y: scroll;} </p>
+<p>.clearfix:after {content: “.”; display: block; height:0; clear:both; visibility: hidden;}<br>.clearfix { *zoom:1; }<br>腾讯官网 样式初始化<br>body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0}<br>body{font:12px”宋体”,”Arial Narrow”,HELVETICA;background:#fff;-webkit-text-size-adjust:100%;}<br>a{color:#2d374b;text-decoration:none}<br>a:hover{color:#cd0200;text-decoration:underline}<br>em{font-style:normal}<br>li{list-style:none}<br>img{border:0;vertical-align:middle}<br>table{border-collapse:collapse;border-spacing:0}<br>p{word-wrap:break-word}<br>新浪官网 样式初始化<br>body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div{margin:0;padding:0;border:0;}<br>body{background:#fff;color:#333;font-size:12px; margin-top:5px;font-family:”SimSun”,”宋体”,”Arial Narrow”;} </p>
+<p>ul,ol{list-style-type:none;}<br>select,input,img,select{vertical-align:middle;} </p>
+<p>a{text-decoration:none;}<br>a:link{color:#009;}<br>a:visited{color:#800080;}<br>a:hover,a:active,a:focus{color:#c00;text-decoration:underline;}<br>淘宝官网 样式初始化<br>body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }<br>body, button, input, select, textarea { font:12px/1.5tahoma, arial, \5b8b\4f53; }<br>h1, h2, h3, h4, h5, h6{ font-size:100%; }<br>address, cite, dfn, em, var { font-style:normal; }<br>code, kbd, pre, samp { font-family:couriernew, courier, monospace; }<br>small{ font-size:12px; }<br>ul, ol { list-style:none; }<br>a { text-decoration:none; }<br>a:hover { text-decoration:underline; }<br>sup { vertical-align:text-top; }<br>sub{ vertical-align:text-bottom; }<br>legend { color:#000; }<br>fieldset, img { border:0; }<br>button, input, select, textarea { font-size:100%; }<br>table { border-collapse:collapse; border-spacing:0; }<br>网易官网 样式初始化<br>html {overflow-y:scroll;}<br>body {margin:0; padding:29px00; font:12px”\5B8B\4F53”,sans-serif;background:#ffffff;}<br>div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,blockquote,p{padding:0; margin:0;}<br>table,td,tr,th{font-size:12px;}<br>li{list-style-type:none;}<br>img{vertical-align:top;border:0;}<br>ol,ul {list-style:none;}<br>h1,h2,h3,h4,h5,h6{font-size:12px; font-weight:normal;} </p>
+<h2 id="address-cite-code-em-th-font-weight-normal-font-style-normal"><a href="#address-cite-code-em-th-font-weight-normal-font-style-normal" class="headerlink" title="address,cite,code,em,th {font-weight:normal; font-style:normal;} "></a>address,cite,code,em,th {font-weight:normal; font-style:normal;} </h2><p>来源：CSDN<br>原文连接：<a href="https://blog.csdn.net/pengpengpeng85/article/details/52070583" target="_blank" rel="noopener">https://blog.csdn.net/pengpengpeng85/article/details/52070583</a> </p>
+
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2019年03月27日 21:26</p>
-        <p>原始链接： <a class="post-url" href="/2019/03/27/hello11111111111/" title="hello11111111111">http://yoursite.com/2019/03/27/hello11111111111/</a></p>
+        <p>最后更新： 2019年04月02日 10:22</p>
+        <p>原始链接： <a class="post-url" href="/2019/04/02/CSS样式初始化/" title="CSS样式初始化">http://yoursite.com/2019/04/02/CSS样式初始化/</a></p>
         <footer>
             <a href="http://yoursite.com">
                 <img src="/images/logo.png" alt="Miss Zhang">
@@ -196,7 +218,7 @@
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/03/27/hello11111111111/&title=《hello11111111111》 — 张雯&pic=http://yoursite.comimages/logo.png" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/04/02/CSS样式初始化/&title=《CSS样式初始化》 — 张雯&pic=http://yoursite.comimages/logo.png" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -206,22 +228,22 @@
             </a>
           </li>
           <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/03/27/hello11111111111/&title=《hello11111111111》 — 张雯&source=" data-title="QQ">
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/04/02/CSS样式初始化/&title=《CSS样式初始化》 — 张雯&source= 建站老手都知道，这是为了考虑到浏览器的兼容问题，其实不同浏览器对有些标签的默认值是不同的，如果没对CSS初始化往往会出现浏览器之间的页面差异。当然，初始..." data-title="QQ">
               <i class="fa fa-qq"></i>
             </a>
           </li>
           <li>
-            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/03/27/hello11111111111/" data-title="Facebook">
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/04/02/CSS样式初始化/" data-title="Facebook">
               <i class="fa fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《hello11111111111》 — 张雯&url=http://yoursite.com/2019/03/27/hello11111111111/&via=http://yoursite.com" data-title="Twitter">
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《CSS样式初始化》 — 张雯&url=http://yoursite.com/2019/04/02/CSS样式初始化/&via=http://yoursite.com" data-title="Twitter">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
           <li>
-            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/03/27/hello11111111111/" data-title="Google+">
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/04/02/CSS样式初始化/" data-title="Google+">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -231,7 +253,7 @@
 <div class="post-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;" id="wxShare-close">×</a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2019/03/27/hello11111111111/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2019/04/02/CSS样式初始化/" alt="微信分享二维码">
 </div>
 
 <div class="mask"></div>
@@ -240,6 +262,15 @@
         <ul class="article-footer-menu">
             
             
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/为什么要初始化CSS/" class="color1">为什么要初始化CSS</a>
+      
+    <a href="/tags/雅虎工程师提供的CSS初始化示例代码/" class="color4">雅虎工程师提供的CSS初始化示例代码</a>
+      
+  </li>
+
         </ul>
         
     </footer>
@@ -247,22 +278,18 @@
 </article>
 
 
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#address-cite-code-em-th-font-weight-normal-font-style-normal"><span class="post-toc-text">address,cite,code,em,th {font-weight:normal; font-style:normal;} </span></a></li></ol>
+        </nav>
+    </aside>
+    
 
 <nav id="article-nav">
   
-    <a href="/2019/04/02/CSS样式初始化/" id="article-nav-newer" class="article-nav-link-wrap">
-
-      <span class="article-nav-title">
-        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
-        
-          CSS样式初始化
-        
-      </span>
-    </a>
   
-  
-    <a href="/2019/03/27/hello11111/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">hello11111</span>
+    <a href="/2019/03/27/hello11111111111/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">hello11111111111</span>
       <i class="fa fa-hand-o-right" aria-hidden="true"></i>
     </a>
   
