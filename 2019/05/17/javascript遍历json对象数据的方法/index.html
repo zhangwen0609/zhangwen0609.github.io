@@ -3,23 +3,23 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
-  <title>常用指令 | 张雯</title>
+  <title>javascript遍历json对象数据的方法 | 张雯</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="MinHow,Zhangwen's Blog">
   
-  <meta name="description" content="每次上传项目总要去百度相关的git指令，在自己的博客中总结一下，方便查看。">
-<meta name="keywords" content="指令">
+  <meta name="description" content="JSON中有两种数据结构：对象和数组。对象是没有length这个属性的，数组有。1.对象 一个对象以“{”开始，以“}”结束，中间以key:“value”的形式存在。1packJson = &amp;#123;&amp;quot;name&amp;quot;:&amp;quot;phpernote&amp;quot;, &amp;quot;password&amp;quot;:&amp;quot;111&amp;quot;&amp;#125; 原生Js遍历json对象的方法">
+<meta name="keywords" content="js">
 <meta property="og:type" content="article">
-<meta property="og:title" content="常用指令">
-<meta property="og:url" content="/2019/04/19/将本地代码上传到github的命令/index.html">
+<meta property="og:title" content="javascript遍历json对象数据的方法">
+<meta property="og:url" content="/2019/05/17/javascript遍历json对象数据的方法/index.html">
 <meta property="og:site_name" content="张雯">
-<meta property="og:description" content="每次上传项目总要去百度相关的git指令，在自己的博客中总结一下，方便查看。">
+<meta property="og:description" content="JSON中有两种数据结构：对象和数组。对象是没有length这个属性的，数组有。1.对象 一个对象以“{”开始，以“}”结束，中间以key:“value”的形式存在。1packJson = &amp;#123;&amp;quot;name&amp;quot;:&amp;quot;phpernote&amp;quot;, &amp;quot;password&amp;quot;:&amp;quot;111&amp;quot;&amp;#125; 原生Js遍历json对象的方法">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-19T02:56:42.793Z">
+<meta property="og:updated_time" content="2019-05-17T08:07:18.428Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="常用指令">
-<meta name="twitter:description" content="每次上传项目总要去百度相关的git指令，在自己的博客中总结一下，方便查看。">
+<meta name="twitter:title" content="javascript遍历json对象数据的方法">
+<meta name="twitter:description" content="JSON中有两种数据结构：对象和数组。对象是没有length这个属性的，数组有。1.对象 一个对象以“{”开始，以“}”结束，中间以key:“value”的形式存在。1packJson = &amp;#123;&amp;quot;name&amp;quot;:&amp;quot;phpernote&amp;quot;, &amp;quot;password&amp;quot;:&amp;quot;111&amp;quot;&amp;#125; 原生Js遍历json对象的方法">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -110,14 +110,14 @@
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap"><article id="post-将本地代码上传到github的命令" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main" class="body-wrap"><article id="post-javascript遍历json对象数据的方法" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="post-title" itemprop="name">
-      常用指令
+      javascript遍历json对象数据的方法
     </h1>
     <div class="post-title-bar">
       <ul>
@@ -125,12 +125,12 @@
               <li>
                   <i class="fa fa-book"></i>
                   
-                      <a href="/categories/常用指令/">常用指令</a>
+                      <a href="/categories/js/">js</a>
                   
               </li>
           
         <li>
-          <i class="fa fa-calendar"></i>  2019-04-19
+          <i class="fa fa-calendar"></i>  2019-05-17
         </li>
         <li>
           <i class="fa fa-eye"></i>
@@ -146,15 +146,15 @@
     <div class="article-entry post-content" itemprop="articleBody">
       
             
-            <p>每次上传项目总要去百度相关的git指令，在自己的博客中总结一下，方便查看。<br> <a id="more"></a><br>一、github上传本地项目<br>在github上新建仓库步骤略。<br>新建仓库之后：<br>1.在命令行中，输入“git init”，使Test文件夹加入git管理；<br>2.输入“git add .”（不要漏了“.”），将Test文件夹全部内容添加到git。<br>3.输入“git commit -m “first commit””（“git commit -m “提交信息””<br>）<br>4.输入“git remote add origin <a href="https://github.com/shench5612390/Test.git”（git" target="_blank" rel="noopener">https://github.com/shench5612390/Test.git”（git</a> remote add origin 你自己的https地址），连接你的guthub仓库。<br>5.输入“git push -u origin master”，上传项目到Github。这里会要求输入Github的账号密码，按要求输入就可以<br>二、hexo常用指令<br>Hexo<br>npm install hexo -g #安装<br>npm update hexo -g #更新<br>hexo init #初始化<br>草稿<br> hexo publish [layout] <title> #发表草稿。<br>写作<br>hexo n “name” #新建文章<br>hexo g #生成静态网页<br>hexo p #发表草稿。<br>hexo s #启动服务<br>hexo d #部署网站 参数：-g 部署之前先生成静态文件。<br>服务器<br>Hexo 3.0 把服务器独立成了个别模块，您必须先安装才能使用。</title></p>
-<p>npm install hexo-server –save #安装服务</p>
-<p>hexo s #启动服务<br>hexo server -p 5000 #更改端口<br>hexo s -s #静态模式<br>hexo s -i 192.168.1.1 #自定义ip</p>
-<p>hexo clean #清除缓存<br>部署<br>hexo d -g<br>hexo g -d</p>
-<h2 id="两者作用完全相同。"><a href="#两者作用完全相同。" class="headerlink" title="两者作用完全相同。"></a>两者作用完全相同。</h2>
+            <a id="more"></a>
+<p>JSON中有两种数据结构：对象和数组。对象是没有length这个属性的，数组有。<br>1.对象<br> 一个对象以“{”开始，以“}”结束，中间以key:“value”的形式存在。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">packJson = &#123;&quot;name&quot;:&quot;phpernote&quot;, &quot;password&quot;:&quot;111&quot;&#125;</span><br></pre></td></tr></table></figure><br> 原生Js遍历json对象的方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> </span><br><span class="line">myJson = &#123;&quot;name&quot;: &quot;phpernote&quot;, &quot;password&quot;: &quot;1111&quot;&#125;;</span><br><span class="line">for (var val in myJson) &#123;</span><br><span class="line">    alert(val + &quot; &quot; + myJson[val]);//输出如:name </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>2.数组<br>数组是值的有序集合。一个数组以“[”开始，“]”结束。值之间运用 “,”分隔。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">packJson = [&#123;&quot;name&quot;:&quot;phpernote&quot;, &quot;password&quot;:&quot;111&quot;&#125;, &#123;&quot;name&quot;:&quot;tony&quot;, &quot;password&quot;:&quot;111&quot;&#125;];</span><br></pre></td></tr></table></figure><br>原生Js遍历json数组的方法<br>2.1无规律json数组：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var json = [&#123;dd: &apos;SB&apos;, AA: &apos;东东&apos;, re1: 123&#125;, &#123;cccc: &apos;dd&apos;, lk: &apos;1qw&apos;&#125;];</span><br><span class="line">for (var i = 0, l = json.length; i &lt; l; i++) &#123;</span><br><span class="line">    for (var key in json[i]) &#123;</span><br><span class="line">        alert(key + &apos;:&apos; + json[i][key]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>2.2有规律的json数组：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">packJson = [</span><br><span class="line">    &#123;&quot;name&quot;: &quot;nikita&quot;, &quot;password&quot;: &quot;1111&quot;&#125;,</span><br><span class="line">    &#123;&quot;name&quot;: &quot;tony&quot;, &quot;password&quot;: &quot;2222&quot;&#125;</span><br><span class="line">];</span><br><span class="line">//1</span><br><span class="line">for (var p in packJson) &#123;//遍历json数组时，这么写p为索引，0,1</span><br><span class="line">    alert(packJson[p].name + &quot; &quot; + packJson[p].password);</span><br><span class="line">&#125;</span><br><span class="line">//2</span><br><span class="line">for(var i = 0; i &lt; packJson.length; i++)&#123;</span><br><span class="line"></span><br><span class="line">   alert(packJson[i].name + &quot; &quot; + packJson[i].password);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2019年04月19日 10:56</p>
-        <p>原始链接： <a class="post-url" href="/2019/04/19/将本地代码上传到github的命令/" title="常用指令">/2019/04/19/将本地代码上传到github的命令/</a></p>
+        <p>最后更新： 2019年05月17日 16:07</p>
+        <p>原始链接： <a class="post-url" href="/2019/05/17/javascript遍历json对象数据的方法/" title="javascript遍历json对象数据的方法">/2019/05/17/javascript遍历json对象数据的方法/</a></p>
         <footer>
             <a href>
                 <img src="/images/logo.png" alt="Miss Zhang">
@@ -211,7 +211,7 @@
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=/2019/04/19/将本地代码上传到github的命令/&title=《常用指令》 — 张雯&pic=images/css.png" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=/2019/05/17/javascript遍历json对象数据的方法/&title=《javascript遍历json对象数据的方法》 — 张雯&pic=images/json.jpg" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -221,22 +221,22 @@
             </a>
           </li>
           <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=/2019/04/19/将本地代码上传到github的命令/&title=《常用指令》 — 张雯&source=每次上传项目总要去百度相关的git指令，在自己的博客中总结一下，方便查看。" data-title="QQ">
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=/2019/05/17/javascript遍历json对象数据的方法/&title=《javascript遍历json对象数据的方法》 — 张雯&source=" data-title="QQ">
               <i class="fa fa-qq"></i>
             </a>
           </li>
           <li>
-            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=/2019/04/19/将本地代码上传到github的命令/" data-title="Facebook">
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=/2019/05/17/javascript遍历json对象数据的方法/" data-title="Facebook">
               <i class="fa fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《常用指令》 — 张雯&url=/2019/04/19/将本地代码上传到github的命令/&via=" data-title="Twitter">
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《javascript遍历json对象数据的方法》 — 张雯&url=/2019/05/17/javascript遍历json对象数据的方法/&via=" data-title="Twitter">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
           <li>
-            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=/2019/04/19/将本地代码上传到github的命令/" data-title="Google+">
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=/2019/05/17/javascript遍历json对象数据的方法/" data-title="Google+">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -246,7 +246,7 @@
 <div class="post-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;" id="wxShare-close">×</a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=/2019/04/19/将本地代码上传到github的命令/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=/2019/05/17/javascript遍历json对象数据的方法/" alt="微信分享二维码">
 </div>
 
 <div class="mask"></div>
@@ -258,7 +258,7 @@
   <li class="article-footer-tags">
     <i class="fa fa-tags"></i>
       
-    <a href="/tags/指令/" class="color3">指令</a>
+    <a href="/tags/js/" class="color3">js</a>
       
   </li>
 
@@ -269,28 +269,12 @@
 </article>
 
 
-    <aside class="post-toc-pos post-toc-top" id="post-toc">
-        <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#两者作用完全相同。"><span class="post-toc-text">两者作用完全相同。</span></a></li></ol>
-        </nav>
-    </aside>
-    
 
 <nav id="article-nav">
   
-    <a href="/2019/04/22/“小马云”被扫地出门：持续成功者，从不靠捷径/" id="article-nav-newer" class="article-nav-link-wrap">
-
-      <span class="article-nav-title">
-        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
-        
-          感悟
-        
-      </span>
-    </a>
   
-  
-    <a href="/2019/04/18/5c项目总结/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">5c项目收获</span>
+    <a href="/2019/04/26/字体和font-family对照表/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">markdown常用语法</span>
       <i class="fa fa-hand-o-right" aria-hidden="true"></i>
     </a>
   
