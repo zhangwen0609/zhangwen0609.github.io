@@ -3,23 +3,23 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
-  <title>5c项目收获 | 张雯</title>
+  <title>日期常用方法 | 张雯</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="MinHow,Zhangwen's Blog">
   
-  <meta name="description" content="2019年4月上半月参加了5c项目的部分开发工作，项目中用到了z-tree、动态tab页等组件。针对开发过程中遇到的问题、解决思路以及收获做个简单的总结">
-<meta name="keywords" content="项目收获">
+  <meta name="description" content="1.对于日期的操作 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758//1.1获取年份、月份等var date = new Date();date.getYear(); //获取当前年份(2位)date.getMonth(); //">
+<meta name="keywords" content="js">
 <meta property="og:type" content="article">
-<meta property="og:title" content="5c项目收获">
-<meta property="og:url" content="/2019/04/18/5c项目总结/index.html">
+<meta property="og:title" content="日期常用方法">
+<meta property="og:url" content="/2019/05/17/常用js方法总结----日期/index.html">
 <meta property="og:site_name" content="张雯">
-<meta property="og:description" content="2019年4月上半月参加了5c项目的部分开发工作，项目中用到了z-tree、动态tab页等组件。针对开发过程中遇到的问题、解决思路以及收获做个简单的总结">
+<meta property="og:description" content="1.对于日期的操作 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758//1.1获取年份、月份等var date = new Date();date.getYear(); //获取当前年份(2位)date.getMonth(); //">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-19T02:56:35.865Z">
+<meta property="og:updated_time" content="2019-05-17T09:12:08.767Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="5c项目收获">
-<meta name="twitter:description" content="2019年4月上半月参加了5c项目的部分开发工作，项目中用到了z-tree、动态tab页等组件。针对开发过程中遇到的问题、解决思路以及收获做个简单的总结">
+<meta name="twitter:title" content="日期常用方法">
+<meta name="twitter:description" content="1.对于日期的操作 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758//1.1获取年份、月份等var date = new Date();date.getYear(); //获取当前年份(2位)date.getMonth(); //">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -110,14 +110,14 @@
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap"><article id="post-5c项目总结" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main" class="body-wrap"><article id="post-常用js方法总结----日期" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="post-title" itemprop="name">
-      5c项目收获
+      日期常用方法
     </h1>
     <div class="post-title-bar">
       <ul>
@@ -125,12 +125,12 @@
               <li>
                   <i class="fa fa-book"></i>
                   
-                      <a href="/categories/项目收获/">项目收获</a>
+                      <a href="/categories/js/">js</a>
                   
               </li>
           
         <li>
-          <i class="fa fa-calendar"></i>  2019-04-18
+          <i class="fa fa-calendar"></i>  2019-05-17
         </li>
         <li>
           <i class="fa fa-eye"></i>
@@ -146,12 +146,15 @@
     <div class="article-entry post-content" itemprop="articleBody">
       
             
-            <p>2019年4月上半月参加了5c项目的部分开发工作，项目中用到了z-tree、动态tab页等组件。针对开发过程中遇到的问题、解决思路以及收获做个简单的总结<br> <a id="more"></a><br>一、问题以及解决思路描述<br>1.之前的树组件使用的是公司的wingsTree，因为封装太死，不能添加太多的个性化需求(比如特定叶子节点文字变红)，从而按成了z-tree（wingsTree实质上是对z-tree的二次封装）<br>2.z-tree和项目中使用的tab页组件冲突（具体冲突原因暂时未找到），进而需要改造tab组件<br>二、总结<br>1.能不用wings就尽量不使用，因为wings毕竟是二次封装，使用起来方便但是不灵活，在需求复杂又多变的情况下，尽量回避使用wings<br>2.逻辑较复杂的情况下，多些注释，利己利人<br>3.没用的代码及时删除，或者注释掉<br>4.<br>demo地址：<a href="http://htmlpreview.github.io/?https://github.com/zhangwen0609/z-treeDemo/blob/master/zTreeDemo.html" target="_blank" rel="noopener">http://htmlpreview.github.io/?https://github.com/zhangwen0609/z-treeDemo/blob/master/zTreeDemo.html</a><br>z-tree api地址：<a href="http://www.treejs.cn/v3/api.php" target="_blank" rel="noopener">http://www.treejs.cn/v3/api.php</a><br>github項目地址: <a href="https://github.com/zhangwen0609/z-treeDemo.git" target="_blank" rel="noopener">https://github.com/zhangwen0609/z-treeDemo.git</a><br>推荐博客地址：<a href="https://blog.csdn.net/weixin_40848638/article/details/83892869" target="_blank" rel="noopener">https://blog.csdn.net/weixin_40848638/article/details/83892869</a></p>
-<h2 id="项目中使用的z-tree为3-0-版本"><a href="#项目中使用的z-tree为3-0-版本" class="headerlink" title="项目中使用的z-tree为3.0+版本"></a>项目中使用的z-tree为3.0+版本</h2>
+            <a id="more"></a>
+<p>1.对于日期的操作</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">//1.1获取年份、月份等</span><br><span class="line">var date = new Date();</span><br><span class="line">date.getYear(); //获取当前年份(2位)</span><br><span class="line">date.getMonth(); //获取当前月份(0-11,0代表1月)</span><br><span class="line">date.getDate(); //获取当前日(1-31)</span><br><span class="line">date.getDay(); //获取当前星期X(0-6,0代表星期天)</span><br><span class="line">date.getTime(); //获取当前时间(从1970.1.1开始的毫秒数)</span><br><span class="line">date.getHours(); //获取当前小时数(0-23)</span><br><span class="line">date.getMinutes(); //获取当前分钟数(0-59)</span><br><span class="line">date.getSeconds(); //获取当前秒数(0-59)</span><br><span class="line">date.getMilliseconds(); //获取当前毫秒数(0-999)</span><br><span class="line">date.toLocaleDateString(); //获取当前日期</span><br><span class="line">var mytime = date.toLocaleTimeString(); //获取当前时间</span><br><span class="line">date.toLocaleString(); //获取日期与时间</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//获取年份</span><br><span class="line">var year = date.getFullYear();</span><br><span class="line">//获取上个月月份</span><br><span class="line">var mouth = date.getMonth();</span><br><span class="line">//定义当月的天数；</span><br><span class="line">var days;</span><br><span class="line">//当月份为二月时，根据闰年还是非闰年判断天数</span><br><span class="line">if(mouth == 2) &#123;</span><br><span class="line">	days = year % 4 == 0 ? 29 : 28;</span><br><span class="line">&#125; else if(mouth == 1 || mouth == 3 || mouth == 5 || mouth == 7 ||</span><br><span class="line">	mouth == 8 || mouth == 10 || mouth == 12) &#123;</span><br><span class="line">	//月份为：1,3,5,7,8,10,12 时，为大月.则天数为31；</span><br><span class="line">	days = 31;</span><br><span class="line">&#125; else &#123;</span><br><span class="line">	//其他月份，天数为：30.</span><br><span class="line">	days = 30;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//输出天数</span><br><span class="line">mouth = mouth &lt; 10 ? &quot;0&quot; + mouth : mouth;</span><br><span class="line"></span><br><span class="line">//1.2日期格式化</span><br><span class="line">Date.prototype.Format = function(fmt) &#123;</span><br><span class="line">var o = &#123;</span><br><span class="line">	&quot;M+&quot;: this.getMonth() + 1, //月份 </span><br><span class="line">	&quot;d+&quot;: this.getDate(), //日 </span><br><span class="line">	&quot;H+&quot;: this.getHours(), //小时 </span><br><span class="line">	&quot;m+&quot;: this.getMinutes(), //分 </span><br><span class="line">	&quot;s+&quot;: this.getSeconds(), //秒 </span><br><span class="line">	&quot;q+&quot;: Math.floor((this.getMonth() + 3) / 3), //季度 </span><br><span class="line">	&quot;S&quot;: this.getMilliseconds() //毫秒 </span><br><span class="line">&#125;;</span><br><span class="line">if(/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + &quot;&quot;).substr(4 - RegExp.$1.length));</span><br><span class="line">for(var k in o)</span><br><span class="line">	if(new RegExp(&quot;(&quot; + k + &quot;)&quot;).test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : ((&quot;00&quot; + o[k]).substr((&quot;&quot; + o[k]).length)));</span><br><span class="line">return fmt;</span><br><span class="line">&#125;</span><br><span class="line">console.log(new Date().Format(&quot;yyyy-MM-dd&quot;));//2019-05-17</span><br><span class="line">console.log(new Date().Format(&quot;yyyy-MM-dd HH:mm:ss&quot;))//2019-05-17 16:27:02</span><br><span class="line">console.log(new Date().Format(&quot;yyyy/MM/dd&quot;));//2019/05/17</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2019年04月19日 10:56</p>
-        <p>原始链接： <a class="post-url" href="/2019/04/18/5c项目总结/" title="5c项目收获">/2019/04/18/5c项目总结/</a></p>
+        <p>最后更新： 2019年05月17日 17:12</p>
+        <p>原始链接： <a class="post-url" href="/2019/05/17/常用js方法总结----日期/" title="日期常用方法">/2019/05/17/常用js方法总结----日期/</a></p>
         <footer>
             <a href>
                 <img src="/images/logo.png" alt="Miss Zhang">
@@ -208,7 +211,7 @@
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=/2019/04/18/5c项目总结/&title=《5c项目收获》 — 张雯&pic=images/css.png" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=/2019/05/17/常用js方法总结----日期/&title=《日期常用方法》 — 张雯&pic=images/date.jpg" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -218,22 +221,22 @@
             </a>
           </li>
           <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=/2019/04/18/5c项目总结/&title=《5c项目收获》 — 张雯&source=2019年4月上半月参加了5c项目的部分开发工作，项目中用到了z-tree、动态tab页等组件。针对开发过程中遇到的问题、解决思路以及收获做个简单的总结" data-title="QQ">
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=/2019/05/17/常用js方法总结----日期/&title=《日期常用方法》 — 张雯&source=" data-title="QQ">
               <i class="fa fa-qq"></i>
             </a>
           </li>
           <li>
-            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=/2019/04/18/5c项目总结/" data-title="Facebook">
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=/2019/05/17/常用js方法总结----日期/" data-title="Facebook">
               <i class="fa fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《5c项目收获》 — 张雯&url=/2019/04/18/5c项目总结/&via=" data-title="Twitter">
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《日期常用方法》 — 张雯&url=/2019/05/17/常用js方法总结----日期/&via=" data-title="Twitter">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
           <li>
-            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=/2019/04/18/5c项目总结/" data-title="Google+">
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=/2019/05/17/常用js方法总结----日期/" data-title="Google+">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -243,7 +246,7 @@
 <div class="post-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;" id="wxShare-close">×</a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=/2019/04/18/5c项目总结/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=/2019/05/17/常用js方法总结----日期/" alt="微信分享二维码">
 </div>
 
 <div class="mask"></div>
@@ -255,7 +258,7 @@
   <li class="article-footer-tags">
     <i class="fa fa-tags"></i>
       
-    <a href="/tags/项目收获/" class="color5">项目收获</a>
+    <a href="/tags/js/" class="color3">js</a>
       
   </li>
 
@@ -266,28 +269,22 @@
 </article>
 
 
-    <aside class="post-toc-pos post-toc-top" id="post-toc">
-        <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#项目中使用的z-tree为3-0-版本"><span class="post-toc-text">项目中使用的z-tree为3.0+版本</span></a></li></ol>
-        </nav>
-    </aside>
-    
 
 <nav id="article-nav">
   
-    <a href="/2019/04/19/将本地代码上传到github的命令/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/05/17/javascript遍历json对象数据的方法/" id="article-nav-newer" class="article-nav-link-wrap">
 
       <span class="article-nav-title">
         <i class="fa fa-hand-o-left" aria-hidden="true"></i>
         
-          常用指令
+          javascript遍历json对象数据的方法
         
       </span>
     </a>
   
   
-    <a href="/2019/04/15/基于echarts实现2d以及3d效果的热力数据以及票流数据展示/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">基于echarts实现2d以及3d效果的热力数据以及票流数据展示</span>
+    <a href="/2019/04/26/字体和font-family对照表/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">markdown常用语法</span>
       <i class="fa fa-hand-o-right" aria-hidden="true"></i>
     </a>
   
