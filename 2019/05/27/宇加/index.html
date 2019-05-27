@@ -3,30 +3,23 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
-  <title>感悟 | 张雯</title>
+  <title>高性能网站建设指南 | 张雯</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="MinHow,Zhangwen's Blog">
   
-  <meta name="description" content="闲来无事，翻看新闻，被一篇文章吸引，看后深受启发，copy过来分享一下，希望能看到我博客的你，也能从中领悟到什么">
-<meta name="keywords" content="毒鸡汤">
+  <meta name="description" content="同样的网络环境，看着别人的网站“刷”地一下就展现出来，你是否和我一样，心急如焚，盼望着早点儿攒出一笔钱，给服务器加点儿内存？或者你已经挽起袖子，开始研究数据库优化？又或者你在暗自思量着可以把哪些设计模式或编码技巧运用在自己的后台代码里，盼望依次带来性能上的巨幅提升？哦，别激动，很多时候事情并没有你想的这么严重。我们知道，一次web应用程序请求，就是从浏览器发出一些参数到你的服务器，然后服务器上的">
+<meta name="keywords" content="高性能网站">
 <meta property="og:type" content="article">
-<meta property="og:title" content="感悟">
-<meta property="og:url" content="/2019/04/22/“小马云”被扫地出门：持续成功者，从不靠捷径/index.html">
+<meta property="og:title" content="高性能网站建设指南">
+<meta property="og:url" content="/2019/05/27/宇加/index.html">
 <meta property="og:site_name" content="张雯">
-<meta property="og:description" content="闲来无事，翻看新闻，被一篇文章吸引，看后深受启发，copy过来分享一下，希望能看到我博客的你，也能从中领悟到什么">
+<meta property="og:description" content="同样的网络环境，看着别人的网站“刷”地一下就展现出来，你是否和我一样，心急如焚，盼望着早点儿攒出一笔钱，给服务器加点儿内存？或者你已经挽起袖子，开始研究数据库优化？又或者你在暗自思量着可以把哪些设计模式或编码技巧运用在自己的后台代码里，盼望依次带来性能上的巨幅提升？哦，别激动，很多时候事情并没有你想的这么严重。我们知道，一次web应用程序请求，就是从浏览器发出一些参数到你的服务器，然后服务器上的">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="/images/马云.jpeg">
-<meta property="og:image" content="/images/小马云.jpeg">
-<meta property="og:image" content="/images/范冰冰.jpeg">
-<meta property="og:image" content="/images/刘德华.jpeg">
-<meta property="og:image" content="/images/刘德华鞠躬道歉.jpeg">
-<meta property="og:image" content="/images/杜蕾斯.jpeg">
-<meta property="og:updated_time" content="2019-04-22T08:41:46.381Z">
+<meta property="og:updated_time" content="2019-05-27T09:28:55.463Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="感悟">
-<meta name="twitter:description" content="闲来无事，翻看新闻，被一篇文章吸引，看后深受启发，copy过来分享一下，希望能看到我博客的你，也能从中领悟到什么">
-<meta name="twitter:image" content="/images/马云.jpeg">
+<meta name="twitter:title" content="高性能网站建设指南">
+<meta name="twitter:description" content="同样的网络环境，看着别人的网站“刷”地一下就展现出来，你是否和我一样，心急如焚，盼望着早点儿攒出一笔钱，给服务器加点儿内存？或者你已经挽起袖子，开始研究数据库优化？又或者你在暗自思量着可以把哪些设计模式或编码技巧运用在自己的后台代码里，盼望依次带来性能上的巨幅提升？哦，别激动，很多时候事情并没有你想的这么严重。我们知道，一次web应用程序请求，就是从浏览器发出一些参数到你的服务器，然后服务器上的">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -117,14 +110,14 @@
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap"><article id="post-“小马云”被扫地出门：持续成功者，从不靠捷径" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main" class="body-wrap"><article id="post-宇加" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="post-title" itemprop="name">
-      感悟
+      高性能网站建设指南
     </h1>
     <div class="post-title-bar">
       <ul>
@@ -132,12 +125,12 @@
               <li>
                   <i class="fa fa-book"></i>
                   
-                      <a href="/categories/生活/">生活</a>
+                      <a href="/categories/性能优化/">性能优化</a>
                   
               </li>
           
         <li>
-          <i class="fa fa-calendar"></i>  2019-04-22
+          <i class="fa fa-calendar"></i>  2019-05-27
         </li>
         <li>
           <i class="fa fa-eye"></i>
@@ -153,93 +146,14 @@
     <div class="article-entry post-content" itemprop="articleBody">
       
             
-            <p>闲来无事，翻看新闻，被一篇文章吸引，看后深受启发，copy过来分享一下，希望能看到我博客的你，也能从中领悟到什么<br> <a id="more"></a><br>颜值即正义的当下，经常会有人问一个问题：成功和长相，有没有必然关系？</p>
-<p>马云告诉我们，没有。</p>
-<p>前阵子，一个叫范小勤，被称为“小马云”的孩子，被“解雇”了。事件引发了网友们的热议。<br><img src="/images/马云.jpeg" alt></p>
-<p>2016年初，江西儿童范小勤因一组酷似马云的照片走红。经纪公司闻风而至。</p>
-<p>范父认为，孩子因长相酷似马云，备受追捧是天降的好事，这是一条改变全家命运的捷径。他在经纪合同上签了字。</p>
-<p>之后，范小勤便有了个新名字，“小马云”。</p>
-<p>最初，“小马云”在聚光灯下，迷茫又木讷。</p>
-<p>两年后，他开始适应新的生活，有网友爆料称，他出门“配着保镖和美女秘书”，一开口“满是社会味儿！”<br><img src="/images/小马云.jpeg" alt></p>
-<p>随着马云“退休”，“小马云”生活富足，身子变胖，渐渐不那么像马云。</p>
-<p>经纪公司发现，无法再从这个娃娃身上榨取流量，最终和他解了约。</p>
-<p>不知范父是否有过一丝悔恨？在先前的各种场合，他甚至多次提及，“只要能赚钱的事，我们就干”。</p>
-<p>儿子天生长了一张酷似马云的脸，被范家人过度依赖、消费，甚至视为生命中重要的事。</p>
-<p>是他们，变相加速了“小马云”的陨落。</p>
-<p>人生如同道路，最近的捷径通常是最坏的路。</p>
-<p>时代飞速发展，那些能持续成功的人，从不信这世上有捷径可走。</p>
-<p>1.指望运气，终会败光</p>
-<p>这样的事例层出不穷：彩票意外中奖，从此耽于享乐。不出几年，生活反倒大不如前。</p>
-<p>美国国家经济研究局调查发现：最近20年来，欧美彩票头奖得主，5年之内，破产率高达75%。</p>
-<p>2008年，普通打工仔张某大乐透中奖1013万。</p>
-<p>出人意料的是，他不但没有好好安排获奖后的生活，还将所有奖金、包括以前的存款、房车变卖后的钱，都全部拿来再次买彩票，期望更大奖。</p>
-<p>短短8个月，钱一分不剩。随后，张某又分别向15位同学、朋友骗取借款236.5万元。</p>
-<p>再次血本无归后，张某潜逃，四年后落网，被判处有期徒刑12年，并处罚金240万。</p>
-<p>我有个朋友老张，生活在三线城市，因城中村拆迁获赔200万，当即辞了工作，出国玩了一圈，回来后又沉溺于赌博。</p>
-<p>不出半年，赔款花光，欠几十万网贷，入了征信黑名单。</p>
-<p>明明一手好牌，终究打得稀烂。</p>
-<p>天降横财，幻想从此不劳而获，即便锦鲤附体，你此时的运气也将不再是运气，只是阻碍你前进的诅咒。</p>
-<p>刘强东说，世界上唯一可以不劳而获的是贫穷，唯一可以无中生有的是梦想。</p>
-<p>千万别像那寓言中的猎人，一朝遇到一只倒霉兔子，就心心念念地守在木桩前，从此只想靠运气活着。</p>
-<p>偶尔撞大运，未付诸心力，不懂珍惜，最终，一定会败光。</p>
-<p>2.笃信捷径，成就终究有限</p>
-<p>《奇葩说》里有一句话：你可以一天整成范冰冰，却没法一天读成林徽因。</p>
-<p>2016年，参加超女前，何承熹花了8年时间，将自己整容成范冰冰，相似度几近99%。<br><img src="/images/范冰冰.jpeg" alt></p>
-<p>你猜哪个是冰冰？<br>然而，把整容当捷径的她，在人们心中始终不过是一个“博出位”的人。</p>
-<p>她最后也并没有如所想的那样，大红大紫。只是靠拍拍网大而活，收成有限。</p>
-<p>真正能获得大成就的人，从来不走捷径。</p>
-<p>华人娱乐圈里，刘德华一直是神一样的存在。明明生着一张无可挑剔的帅脸，却从未停滞不前，靠脸吃饭。<br><img src="/images/刘德华.jpeg" alt></p>
-<p>在粉丝心中，他不仅仅是影视歌三栖巨星，还是时代精神的象征。</p>
-<p>论演技，他可能比不过梁朝伟，论唱歌，他可能及不上张学友，但出道30年，他一直不曾过气，靠的是够拼二字。</p>
-<p>2006年拍电影《墨攻》，他从五层多高的城楼飞下，左脚受伤。为了不耽误拍摄，忍到第二天戏份结束，才告诉工作人员。</p>
-<p>之后拍《投名状》，也因太过投入，小拇指被铁链缠住，拉至骨折，他同样强忍着拍完了戏。</p>
-<p>拍摄《夏日福星》时，不小心从楼上摔下，经过短短两星期治疗，他就重回剧组，亲自上场完成该组镜头。</p>
-<p>去年底，在第14场演唱会上，刘德华因喉咙发炎，唱了三首歌后，取消演出。</p>
-<p>他在现场哭着向观众鞠躬道歉。<br><img src="/images/刘德华鞠躬道歉.jpeg" alt></p>
-<p>人生无非就是赤脚行走，有鲜花草地，也有玻璃荆棘，唯独没有捷径。</p>
-<p>不笃信捷径，始终踏实拼搏，不断奉献好作品给观众，这个57岁依然如此拼的帅男人，活该红一辈子。</p>
-<p>3.真正的机会来临时，怎样才能接得住？</p>
-<p>哈佛大学曾有一项调查报告声称：</p>
-<p>人平均一辈子有7次,决定人生走向的机会。</p>
-<p>两次机会间隔约7年，大概25岁后开始出现。</p>
-<p>对普通人来说，该如何才能牢牢抓住改变自己命运的机会？我想和你分享3点个人思索。</p>
-<p>① 打造独有的核心竞争力</p>
-<p>一个人能被别人记住，一定不是拾人牙慧、步人后尘，而是他的独一无二。</p>
-<p>周星驰早年入行，自知帅不过刘德华，演不过梁朝伟，他给自己找到的突破口和鲜明标签是：以无厘头喜剧的形式，聚焦小人物的悲欢。</p>
-<p>最终，他成为了华语影坛最知名的喜剧演员，之后又成为最具票房号召力的华语电影导演之一。</p>
-<p>新加入一个圈子，当你清晰找到自己独树一帜之处，便是你立起人设，脱颖而出之时。</p>
-<p>② 顺势而为，借势而起</p>
-<p>雷军曾说，顺势而为。</p>
-<p>顺，可以是借助一个品牌或热点事件，见缝插针宣扬自己，不断扩散自身影响力。</p>
-<p>最典型的例子，当属杜蕾斯文案。</p>
-<p>去年蹭《复联3》热点，杜蕾斯就连发两条：</p>
-<p>上映前：不论何时开战，我都在第一线。</p>
-<p>上映当日：放心，不透。</p>
-<p>前段时间奔驰漏油事件，也立马跟进：他们漏，我们不漏。</p>
-<p>这里有两个关键点：</p>
-<p>其一，你自己得有料，才可能真正借势而起；</p>
-<p>其二，不是什么势都能借，一定得找到与自己调性匹配的，才能扩大正向影响。</p>
-<p>比如，杜蕾斯最近和喜茶的联名宣传，就翻车了。</p>
-<p>4月19日，杜蕾斯官微发博@喜茶：Hi，还得第二次约会，我对你说「你的第一口最珍贵」？<br><img src="/images/杜蕾斯.jpeg" alt></p>
-<p>此借势之举，引发网友极大不适，纷纷表示：</p>
-<p>“再也无法正视奶茶”；</p>
-<p>“对奶茶有了生理性恶心。”</p>
-<p>这就叫调性不匹配，尺度没把好，最终适得其反。</p>
-<p>③ 培养复利思维，持续输出价值</p>
-<p>巴菲特始终强调复利的重要性。</p>
-<p>对咱们普通人而言，更需要做的，是在充分理解复利的基础上，埋头苦干。</p>
-<p>比如，同样写一篇文章，如果你仅是发表在一个平台就完事，而我多平台分发，且将核心观点提炼出来形成课程，最后还把它放进了我的书里，那么显而易见，我充分运用了复利思维，得到多次产出。</p>
-<p>复利思维，决定了我们的工作效能；持续输出，则关乎我们的积累和口碑。</p>
-<p>二者合在一起，才能加速成功的步伐。</p>
-<p>安娜·昆德兰说，生命是一个从生到死的过程，如果我们活着的目的只是为了探寻捷径，那么生下来就死，无疑是最快捷的路程。</p>
-<p>如果这样，你的人生，又有何意义？</p>
-<p>成功路上，没有任何捷径和技巧，自以为是的快，最终都是弯路。唯一能够到达终点的秘诀：永不放弃，笔直向前！</p>
+            <a id="more"></a>
+<p>同样的网络环境，看着别人的网站“刷”地一下就展现出来，你是否和我一样，心急如焚，盼望着早点儿攒出一笔钱，给服务器加点儿内存？或者你已经挽起袖子，开始研究<br>数据库优化？又或者你在暗自思量着可以把哪些设计模式或编码技巧运用在自己的后台代码里，盼望依次带来性能上的巨幅提升？<br>哦，别激动，很多时候事情并没有你想的这么严重。<br>我们知道，一次web应用程序请求，就是从浏览器发出一些参数到你的服务器，然后服务器上的程序对你的请求进行处理，再生浏览器可以识别的内容（html,css,脚本，图片,flash）等，最后<br>由浏览器将这些内容展现给访问者。人们将这一过程划分为“前端”和“后端”两个部分。<br>“后端”用于分析用户请求、执行数据查询并对结果进行组织，形成浏览器可以识别的内容；<br>“前端”负责将后端生成的内容通过网络发送给客户端浏览器。<br>人的思维往往会进入一种误区，认为“后面的”、“背后的”东西都是神秘的、伟大的、影响力非凡。所以很多书以“某某内幕”为题，很多程序员以精通<br>“底层开发”或者“后端开发”为荣；同样的，当网站出现问题时，我们第一时间会想到的也是如何优化“后端”。<br>本系列文章将帮助我们端正在网站性能优化方面的看法，带我们走出误区。<br>文章将介绍14个性能优化的规则。并非每个规则都要适用于每个网站，也不是每个网站都应该按照同一种方式运用一个规则，但每个规则都值得考虑。<br>规则一：减少http请求<br>规则二：使用内容发布网络<br>规则三：添加Expires头<br>规则四：压缩组件<br>规则五：将样式表放到顶部<br>规则六：将脚本放到底部<br>规则七：避免css表达式<br>规则八：使用外部JavaScript和CSS<br>规则九：减少DNS查找<br>规则十：精简JavaScript<br>规则十一：避免重定向<br>规则十二：删除重复脚本<br>规则十三：配置ETag<br>规则十四：使Ajax可缓存</p>
 <hr>
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2019年04月22日 16:41</p>
-        <p>原始链接： <a class="post-url" href="/2019/04/22/“小马云”被扫地出门：持续成功者，从不靠捷径/" title="感悟">/2019/04/22/“小马云”被扫地出门：持续成功者，从不靠捷径/</a></p>
+        <p>最后更新： 2019年05月27日 17:28</p>
+        <p>原始链接： <a class="post-url" href="/2019/05/27/宇加/" title="高性能网站建设指南">/2019/05/27/宇加/</a></p>
         <footer>
             <a href>
                 <img src="/images/logo.png" alt="Miss Zhang">
@@ -296,7 +210,7 @@
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=/2019/04/22/“小马云”被扫地出门：持续成功者，从不靠捷径/&title=《感悟》 — 张雯&pic=images/远行.jpeg" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=/2019/05/27/宇加/&title=《高性能网站建设指南》 — 张雯&pic=images/优化.png" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -306,22 +220,22 @@
             </a>
           </li>
           <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=/2019/04/22/“小马云”被扫地出门：持续成功者，从不靠捷径/&title=《感悟》 — 张雯&source=闲来无事，翻看新闻，被一篇文章吸引，看后深受启发，copy过来分享一下，希望能看到我博客的你，也能从中领悟到什么" data-title="QQ">
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=/2019/05/27/宇加/&title=《高性能网站建设指南》 — 张雯&source=" data-title="QQ">
               <i class="fa fa-qq"></i>
             </a>
           </li>
           <li>
-            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=/2019/04/22/“小马云”被扫地出门：持续成功者，从不靠捷径/" data-title="Facebook">
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=/2019/05/27/宇加/" data-title="Facebook">
               <i class="fa fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《感悟》 — 张雯&url=/2019/04/22/“小马云”被扫地出门：持续成功者，从不靠捷径/&via=" data-title="Twitter">
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《高性能网站建设指南》 — 张雯&url=/2019/05/27/宇加/&via=" data-title="Twitter">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
           <li>
-            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=/2019/04/22/“小马云”被扫地出门：持续成功者，从不靠捷径/" data-title="Google+">
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=/2019/05/27/宇加/" data-title="Google+">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -331,7 +245,7 @@
 <div class="post-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;" id="wxShare-close">×</a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=/2019/04/22/“小马云”被扫地出门：持续成功者，从不靠捷径/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=/2019/05/27/宇加/" alt="微信分享二维码">
 </div>
 
 <div class="mask"></div>
@@ -343,7 +257,7 @@
   <li class="article-footer-tags">
     <i class="fa fa-tags"></i>
       
-    <a href="/tags/毒鸡汤/" class="color4">毒鸡汤</a>
+    <a href="/tags/高性能网站/" class="color1">高性能网站</a>
       
   </li>
 
@@ -357,19 +271,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2019/04/26/字体和font-family对照表/" id="article-nav-newer" class="article-nav-link-wrap">
-
-      <span class="article-nav-title">
-        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
-        
-          markdown常用语法
-        
-      </span>
-    </a>
   
-  
-    <a href="/2019/04/19/将本地代码上传到github的命令/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">常用指令</span>
+    <a href="/2019/05/17/高性能网站建设指南之总体/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">高性能网站建设指南</span>
       <i class="fa fa-hand-o-right" aria-hidden="true"></i>
     </a>
   
