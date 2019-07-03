@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>同源以及规避同源限制的方法 | 张雯</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="MinHow,Zhangwen's Blog">
+  
+  <meta name="description" content="什么是同源协议相同、域名相同、端口相同 同源政策的目的同源政策的目的，是为了保证用户信息的安全，防止恶意的网站窃取数据。设想这样一种情况：A网站是一家银行，用户登录以后，又去浏览其他网站。如果其他网站可以读取A网站的Cookie，会发生什么？同源策略限制了从一个源加载的文件或者脚本如何与来自另一个源的资源进行交互。可以用于隔离潜在的恶意文件 不同源的情况会有哪些限制随着互联网的发展、“同源政策”">
+<meta name="keywords" content="网络">
+<meta property="og:type" content="article">
+<meta property="og:title" content="同源以及规避同源限制的方法">
+<meta property="og:url" content="/2019/07/02/同源以及规避同源限制的方法/index.html">
+<meta property="og:site_name" content="张雯">
+<meta property="og:description" content="什么是同源协议相同、域名相同、端口相同 同源政策的目的同源政策的目的，是为了保证用户信息的安全，防止恶意的网站窃取数据。设想这样一种情况：A网站是一家银行，用户登录以后，又去浏览其他网站。如果其他网站可以读取A网站的Cookie，会发生什么？同源策略限制了从一个源加载的文件或者脚本如何与来自另一个源的资源进行交互。可以用于隔离潜在的恶意文件 不同源的情况会有哪些限制随着互联网的发展、“同源政策”">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-07-03T06:55:08.671Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="同源以及规避同源限制的方法">
+<meta name="twitter:description" content="什么是同源协议相同、域名相同、端口相同 同源政策的目的同源政策的目的，是为了保证用户信息的安全，防止恶意的网站窃取数据。设想这样一种情况：A网站是一家银行，用户登录以后，又去浏览其他网站。如果其他网站可以读取A网站的Cookie，会发生什么？同源策略限制了从一个源加载的文件或者脚本如何与来自另一个源的资源进行交互。可以用于隔离潜在的恶意文件 不同源的情况会有哪些限制随着互联网的发展、“同源政策”">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">张雯的天地</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a href="/">
+                        <i class="fa fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>Archives</span>
+                    </a>
+                    
+                    <a href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>About</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        张雯的天地
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        一个专注 WEB 开发的技术博客
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="MinHow" target="_blank" href="//minhow.com">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/wongminho">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="Weibo" target="_blank" href="//weibo.com/WongMinHo">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                        <a title="Twitter" target="_blank" href="//twitter.com/huangminhow">
+                            <i class="fa fa-twitter fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-同源以及规避同源限制的方法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      同源以及规避同源限制的方法
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/网络/">网络</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2019-07-02
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <a id="more"></a>
+<p></p><h4>什么是同源</h4><br>协议相同、域名相同、端口相同<p></p>
+<p></p><h4>同源政策的目的</h4><br>同源政策的目的，是为了保证用户信息的安全，防止恶意的网站窃取数据。<br>设想这样一种情况：A网站是一家银行，用户登录以后，又去浏览其他网站。<br>如果其他网站可以读取A网站的Cookie，会发生什么？<br><b>同源策略限制了从一个源加载的文件或者脚本如何与来自另一个源的资源进行交互。可以用于隔离潜在的恶意文件</b><p></p>
+<p></p><h4>不同源的情况会有哪些限制</h4><br>随着互联网的发展、“同源政策”越来越严格。目前，如果非同源，共有三种行为受到限制。<br>（1）cookie\localstorage和indexdb无法获取<br>（2）dom无法获得<br>（3）ajax请求不能发送<p></p>
+<p></p><h4>如何规避上面的三种限制？</h4><p></p>
+<p></p><h5>cookie</h5><br>cookie是服务器写入浏览器的一段信息，只有同源的网页才能共享。<br>但是，两个网页一级域名相同，但是二级域名不同，浏览器允许通过设置document.domain共享cookie。<br>距离来说，网页是<a href="http://w1.example.com/a.html,B网页是http://w2.example.com/b.html" target="_blank" rel="noopener">http://w1.example.com/a.html,B网页是http://w2.example.com/b.html</a><br>那么只要设置相同的document.domain，网页就可以共享cookie。<br>document.domain=’example.com’;<br>现在，A网页通过脚本设置一个cookie。<br>document.cookie=”test1=hello”;<br>B网页就可以读到这个cookie.<br>var allcookie=document.cookie;<p></p>
+<p></p><h5>打开的新窗口和当前窗口不同源</h5><br>如果两个网页不同源，就无法拿到对方的dom。典型的例子就是iframe窗口和window.open<br>方法打卡的窗口，它们与父窗口无法通信。<br>完全不同源的网站，目前有三种方法，可以解决跨域窗口的通信问题。<br>1.片段标识符<br>片段标识符指的是，url的#后面的部分，比如<a href="http://example.com/x.html#frament的#frament" target="_blank" rel="noopener">http://example.com/x.html#frament的#frament</a>.<br>如果只是改变片段标识符，页面不会重新刷新。<br>父窗口的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var src=orginURL+&quot;#&quot;+data;</span><br><span class="line">daocument.getElementById(&apos;myIframe&apos;).src=src;</span><br></pre></td></tr></table></figure><br>子窗口的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">window.onhashchange=checkMessage;</span><br><span class="line">function checkMessage()&#123;</span><br><span class="line">var message=window.location.hash;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><br>2.window.postMessage<br>可以隐藏一个iframe iframe里边的为子页面<br>子页面发送信息<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var ifr=window.parent;</span><br><span class="line">var targetOrigin=&apos;http://localhost:63342/reactWork&apos;;</span><br><span class="line">ifr.postMessage(&quot;asa1111&quot;,targeOrigin);</span><br></pre></td></tr></table></figure><br>父页面<br>在父页面中通过隐藏一个iframe来实现跨域的数据传输<br>html<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe src=&quot;http://localhost:3000/talk&quot; id=&quot;test&quot;&gt;&lt;/iframe&gt;</span><br></pre></td></tr></table></figure><br>js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">window.addEventListener(&apos;message&apos;,function(event)&#123;</span><br><span class="line">if(event.origin==&apos;http://localhost:1234&apos;)&#123;</span><br><span class="line"> console.log(event.data)//会输出event的数据</span><br><span class="line">&#125;</span><br><span class="line">&#125;，false)</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure><p></p>
+<p></p><h5>ajax</h5><br>同源政策规定，ajax请求只能发给同源的网站，负责就会报错。<br>1.jsonp<br>jsonp是服务器与客户端跨源通信的常用方法。最大的特点就是简单适用，老浏览器全部会支持，<br>服务器改造非常小。<br>基本思想<br>网页通过添加一个<script>元素，前端的浏览器向服务器请求json数据，<br>这种做法是不会受到同源政策的限制；服务器在收到请求后，<br>将数据放在一个指定名字的回调函数foo里面传回来。<br>前端js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">//动态的插入js脚本</span><br><span class="line">function addScriptTag(src)&#123;</span><br><span class="line">var script=document.createElement(&apos;script&apos;);</span><br><span class="line">script.setAttribute(&apos;type&apos;,&apos;text/javascript&apos;);</span><br><span class="line">script.src=src;</span><br><span class="line">document.body.appendChild(script);</span><br><span class="line">&#125;</span><br><span class="line">window.onload=function()&#123;</span><br><span class="line">addScriptTag(&apos;http://localhost:3000/talk?callback=foo&apos;);</span><br><span class="line">&#125;</span><br><span class="line">//传到服务器端的那个回调函数</span><br><span class="line">function foo(data)&#123;</span><br><span class="line">console.log(&apos;Ypur public ip address is:&apos;+data.ip);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>服务器端<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">foo(&#123;</span><br><span class="line">&quot;ip&quot;:&quot;8.8.8.8&quot;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<p><h4>源的继承</h4><br>在页面中用about:black或者javascript:URL执行。。。。</p>
+<p><h4>源的更改</h4><br>eg：<br><a href="http://store.company.com/dir/other.html">http://store.company.com/dir/other.html</a><br>执行以下脚本：document.domain=”company.com”;<br>这条语句执行之后，页面将会成功地通过对<a href="http://company.dom/idr/page.html">http://company.dom/idr/page.html</a><br>的同源检测。然而，不能设置为othercompany.com,因为它不是store.company.com的父域。<br>端口号是由浏览器另行检查的。任何对document.domain的赋值操作，包括document.domain=document.domain都会导致端口号被重写为null。<br>因此company.com:8080不能仅仅通过设置document.domain=”company.com”来与company.com通信。必须要在他们双方中都进行赋值，以确保端口号都为null</p>
+<h2 id="注意：使用-document-domain-来允许子域安全访问其父域时，您需要在父域和子域中设置-document-domain-为相同的值。这是必要的，即使这样做只是将父域设置回其原始值。不这样做可能会导致权限错误。"><a href="#注意：使用-document-domain-来允许子域安全访问其父域时，您需要在父域和子域中设置-document-domain-为相同的值。这是必要的，即使这样做只是将父域设置回其原始值。不这样做可能会导致权限错误。" class="headerlink" title="注意：使用 document.domain 来允许子域安全访问其父域时，您需要在父域和子域中设置 document.domain 为相同的值。这是必要的，即使这样做只是将父域设置回其原始值。不这样做可能会导致权限错误。"></a><b>注意：使用 document.domain 来允许子域安全访问其父域时，您需要在父域和子域中设置 document.domain 为相同的值。这是必要的，即使这样做只是将父域设置回其原始值。不这样做可能会导致权限错误。</b></h2></script>
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2019年07月03日 14:55</p>
+        <p>原始链接： <a class="post-url" href="/2019/07/02/同源以及规避同源限制的方法/" title="同源以及规避同源限制的方法">/2019/07/02/同源以及规避同源限制的方法/</a></p>
+        <footer>
+            <a href>
+                <img src="/images/logo.png" alt="Miss Zhang">
+                Miss Zhang
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;">赏</a>
+</div>
+
+<div id="reward" class="post-modal reward-lay">
+    <a class="close" href="javascript:;" id="reward-close">×</a>
+    <span class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃糖~
+        <i class="icon icon-quote-right"></i>
+    </span>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/images/wechat_code.jpg" alt="打赏二维码">
+        </div>
+        <div class="reward-select">
+            
+            <label class="reward-select-item checked" data-id="wechat" data-wechat="/images/wechat_code.jpg">
+                <img class="reward-select-item-wechat" src="/images/wechat.png" alt="微信">
+            </label>
+            
+            
+            <label class="reward-select-item" data-id="alipay" data-alipay="/images/alipay_code.jpg">
+                <img class="reward-select-item-alipay" src="/images/alipay.png" alt="支付宝">
+            </label>
+            
+        </div>
+    </div>
+</div>
+
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=/2019/07/02/同源以及规避同源限制的方法/&title=《同源以及规避同源限制的方法》 — 张雯&pic=images/date.jpg" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=/2019/07/02/同源以及规避同源限制的方法/&title=《同源以及规避同源限制的方法》 — 张雯&source=" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=/2019/07/02/同源以及规避同源限制的方法/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《同源以及规避同源限制的方法》 — 张雯&url=/2019/07/02/同源以及规避同源限制的方法/&via=" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=/2019/07/02/同源以及规避同源限制的方法/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=/2019/07/02/同源以及规避同源限制的方法/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/网络/" class="color3">网络</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#undefined"><span class="post-toc-text">什么是同源</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#undefined"><span class="post-toc-text">同源政策的目的</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#undefined"><span class="post-toc-text">不同源的情况会有哪些限制</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#undefined"><span class="post-toc-text">如何规避上面的三种限制？</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#undefined"><span class="post-toc-text">cookie</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#undefined"><span class="post-toc-text">打开的新窗口和当前窗口不同源</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#undefined"><span class="post-toc-text">ajax</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+    <a href="/2019/07/03/ajax跳入error的原因总结/" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          ajax跳入eror原因总结
+        
+      </span>
+    </a>
+  
+  
+    <a href="/2019/06/04/自适应布局和响应式布局的区别/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">自适应和响应式布局的区别</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style="display:none">
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style="display:none">
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2019 Miss Zhang<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "",
+      animate: true,
+      isHome: false,
+      share: true,
+      reward: 1
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/CSS/">CSS</a><a class="category-link" href="/categories/ajax/">ajax</a><a class="category-link" href="/categories/echarts/">echarts</a><a class="category-link" href="/categories/js/">js</a><a class="category-link" href="/categories/markdown/">markdown</a><a class="category-link" href="/categories/常用指令/">常用指令</a><a class="category-link" href="/categories/性能优化/">性能优化</a><a class="category-link" href="/categories/生活/">生活</a><a class="category-link" href="/categories/网络/">网络</a><a class="category-link" href="/categories/网页布局/">网页布局</a><a class="category-link" href="/categories/项目收获/">项目收获</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/ajax/" style="font-size: 10px;">ajax</a> <a href="/tags/echarts/" style="font-size: 20px;">echarts</a> <a href="/tags/js/" style="font-size: 20px;">js</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/偷着乐呵/" style="font-size: 10px;">偷着乐呵</a> <a href="/tags/初始化CSS/" style="font-size: 10px;">初始化CSS</a> <a href="/tags/初始化CSS代码示例/" style="font-size: 10px;">初始化CSS代码示例</a> <a href="/tags/地图/" style="font-size: 20px;">地图</a> <a href="/tags/性能优化/" style="font-size: 10px;">性能优化</a> <a href="/tags/指令/" style="font-size: 10px;">指令</a> <a href="/tags/毒鸡汤/" style="font-size: 10px;">毒鸡汤</a> <a href="/tags/网络/" style="font-size: 10px;">网络</a> <a href="/tags/自适应/" style="font-size: 10px;">自适应</a> <a href="/tags/项目收获/" style="font-size: 10px;">项目收获</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a href="/">
+                    <i class="fa fa-home"></i><span>Home</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/archives">
+                    <i class="fa fa-archive"></i><span>Archives</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/about">
+                    <i class="fa fa-user"></i><span>About</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/ajax/" style="font-size: 10px;">ajax</a> <a href="/tags/echarts/" style="font-size: 20px;">echarts</a> <a href="/tags/js/" style="font-size: 20px;">js</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/偷着乐呵/" style="font-size: 10px;">偷着乐呵</a> <a href="/tags/初始化CSS/" style="font-size: 10px;">初始化CSS</a> <a href="/tags/初始化CSS代码示例/" style="font-size: 10px;">初始化CSS代码示例</a> <a href="/tags/地图/" style="font-size: 20px;">地图</a> <a href="/tags/性能优化/" style="font-size: 10px;">性能优化</a> <a href="/tags/指令/" style="font-size: 10px;">指令</a> <a href="/tags/毒鸡汤/" style="font-size: 10px;">毒鸡汤</a> <a href="/tags/网络/" style="font-size: 10px;">网络</a> <a href="/tags/自适应/" style="font-size: 10px;">自适应</a> <a href="/tags/项目收获/" style="font-size: 10px;">项目收获</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+
+  <script src="/js/pop-img.js"></script>
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+</body>
+</html>
