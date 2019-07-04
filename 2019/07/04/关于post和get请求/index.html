@@ -3,23 +3,27 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
-  <title>5c项目收获 | 张雯</title>
+  <title>关于post请求和get请求 | 张雯</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="MinHow,Zhangwen's Blog">
   
-  <meta name="description" content="2019年4月上半月参加了5c项目的部分开发工作，项目中用到了z-tree、动态tab页等组件。针对开发过程中遇到的问题、解决思路以及收获做个简单的总结">
-<meta name="keywords" content="项目收获">
+  <meta name="description" content="get和post区别来自w3school标准答案：从标准上来看，get和post的区别如下：get：用于获取信息，是无副作用的，是幂等的（在编程中一个幂等操作的特点是其任意多次执行所产生的影响均与一次执行的影响相同。幂等函数，或幂等方法，是指可以使用相同参数重复执行，并能获得相同结果的函数。这些函数不会影响系统状态，也不用担心重复执行会对系统造成改变。例如，“setTrue()”函数就是一个幂等">
+<meta name="keywords" content="网络">
 <meta property="og:type" content="article">
-<meta property="og:title" content="5c项目收获">
-<meta property="og:url" content="/2019/04/18/5c项目总结/index.html">
+<meta property="og:title" content="关于post请求和get请求">
+<meta property="og:url" content="/2019/07/04/关于post和get请求/index.html">
 <meta property="og:site_name" content="张雯">
-<meta property="og:description" content="2019年4月上半月参加了5c项目的部分开发工作，项目中用到了z-tree、动态tab页等组件。针对开发过程中遇到的问题、解决思路以及收获做个简单的总结">
+<meta property="og:description" content="get和post区别来自w3school标准答案：从标准上来看，get和post的区别如下：get：用于获取信息，是无副作用的，是幂等的（在编程中一个幂等操作的特点是其任意多次执行所产生的影响均与一次执行的影响相同。幂等函数，或幂等方法，是指可以使用相同参数重复执行，并能获得相同结果的函数。这些函数不会影响系统状态，也不用担心重复执行会对系统造成改变。例如，“setTrue()”函数就是一个幂等">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-19T02:56:35.865Z">
+<meta property="og:image" content="/images/getAndPost.jpeg">
+<meta property="og:image" content="/images/get.jpeg">
+<meta property="og:image" content="/images/post.jpeg">
+<meta property="og:updated_time" content="2019-07-04T10:05:51.254Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="5c项目收获">
-<meta name="twitter:description" content="2019年4月上半月参加了5c项目的部分开发工作，项目中用到了z-tree、动态tab页等组件。针对开发过程中遇到的问题、解决思路以及收获做个简单的总结">
+<meta name="twitter:title" content="关于post请求和get请求">
+<meta name="twitter:description" content="get和post区别来自w3school标准答案：从标准上来看，get和post的区别如下：get：用于获取信息，是无副作用的，是幂等的（在编程中一个幂等操作的特点是其任意多次执行所产生的影响均与一次执行的影响相同。幂等函数，或幂等方法，是指可以使用相同参数重复执行，并能获得相同结果的函数。这些函数不会影响系统状态，也不用担心重复执行会对系统造成改变。例如，“setTrue()”函数就是一个幂等">
+<meta name="twitter:image" content="/images/getAndPost.jpeg">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -110,14 +114,14 @@
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap"><article id="post-5c项目总结" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main" class="body-wrap"><article id="post-关于post和get请求" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="post-title" itemprop="name">
-      5c项目收获
+      关于post请求和get请求
     </h1>
     <div class="post-title-bar">
       <ul>
@@ -125,12 +129,12 @@
               <li>
                   <i class="fa fa-book"></i>
                   
-                      <a href="/categories/项目收获/">项目收获</a>
+                      <a href="/categories/网络/">网络</a>
                   
               </li>
           
         <li>
-          <i class="fa fa-calendar"></i>  2019-04-18
+          <i class="fa fa-calendar"></i>  2019-07-04
         </li>
         <li>
           <i class="fa fa-eye"></i>
@@ -146,12 +150,17 @@
     <div class="article-entry post-content" itemprop="articleBody">
       
             
-            <p>2019年4月上半月参加了5c项目的部分开发工作，项目中用到了z-tree、动态tab页等组件。针对开发过程中遇到的问题、解决思路以及收获做个简单的总结<br> <a id="more"></a><br>一、问题以及解决思路描述<br>1.之前的树组件使用的是公司的wingsTree，因为封装太死，不能添加太多的个性化需求(比如特定叶子节点文字变红)，从而按成了z-tree（wingsTree实质上是对z-tree的二次封装）<br>2.z-tree和项目中使用的tab页组件冲突（具体冲突原因暂时未找到），进而需要改造tab组件<br>二、总结<br>1.能不用wings就尽量不使用，因为wings毕竟是二次封装，使用起来方便但是不灵活，在需求复杂又多变的情况下，尽量回避使用wings<br>2.逻辑较复杂的情况下，多些注释，利己利人<br>3.没用的代码及时删除，或者注释掉<br>4.<br>demo地址：<a href="http://htmlpreview.github.io/?https://github.com/zhangwen0609/z-treeDemo/blob/master/zTreeDemo.html" target="_blank" rel="noopener">http://htmlpreview.github.io/?https://github.com/zhangwen0609/z-treeDemo/blob/master/zTreeDemo.html</a><br>z-tree api地址：<a href="http://www.treejs.cn/v3/api.php" target="_blank" rel="noopener">http://www.treejs.cn/v3/api.php</a><br>github項目地址: <a href="https://github.com/zhangwen0609/z-treeDemo.git" target="_blank" rel="noopener">https://github.com/zhangwen0609/z-treeDemo.git</a><br>推荐博客地址：<a href="https://blog.csdn.net/weixin_40848638/article/details/83892869" target="_blank" rel="noopener">https://blog.csdn.net/weixin_40848638/article/details/83892869</a></p>
-<h2 id="项目中使用的z-tree为3-0-版本"><a href="#项目中使用的z-tree为3-0-版本" class="headerlink" title="项目中使用的z-tree为3.0+版本"></a>项目中使用的z-tree为3.0+版本</h2>
+            <a id="more"></a>
+<p></p><h4>get和post区别</h4><br>来自w3school标准答案：<br><img src="/images/getAndPost.jpeg" alt><br>从标准上来看，get和post的区别如下：<br>get：用于获取信息，是无副作用的，是幂等的（在编程中一个幂等操作的特点是其任意多次执行所产生的影响均与一次执行的影响相同。幂等函数，或幂等方法，是指可以使用相同参数重复执行，并能获得相同结果的函数。这些函数不会影响系统状态，也不用担心重复执行会对系统造成改变。例如，“setTrue()”函数就是一个幂等函数,无论多次执行，其结果都是一样的.更复杂的操作幂等保证是利用唯一交易号(流水号)实现.）<br>post：用于修改服务器上的数据，有副作用，非幂等，不可缓存<p></p>
+<p></p><h5>get、post请求报文上的区别</h5><br>get和post只是http协议中两种请求方式（异曲同工），而http协议是基于tcp/ip的应用层协议，无论get还是post，用的都是一个传输层协议，无论get还是post，用的都是一个传输层协议，所以在传输上，没有区别。<br>报文格式上，不带参数的话，最大区别就是第一行方法名不同：<br>post：POST/url HTTP/1.1<br>get：GET/url HTTP/1.1<br>带参数时报文的区别呢？<br>get：参数放在url中<br><img src="/images/get.jpeg" alt><br>post：参数放在body中<br><img src="/images/post.jpeg" alt><br>现在我们知道了两种方法本质上是tcp连接，没有区别。单如果不按规范来也是可以的。可以在url上写参数，然后方法使用post<br>也可以再body写参数，然后方式使用get。<b>当然，这需要服务端支持</b><p></p>
+<p></p><h5>问&amp;&amp;答</h5><br>1、get方法参数写法是固定的吗？<br>在约定中，我们的参数是写在？后面，用&amp;分割。<br>我们知道，解析报文的过程是通过获取tcp数据，用正则等工具从数据中获取Header和Body，从而提取参数。<br><b>“比如header请求头中添加token，来验证用户是否登录等权限问题”</b><br>也就是说，我们可以自己约定参数写法，只要服务端能够解释出来就行，万变不离其宗。<br>2、get方法的长度限制是怎么回事？<br>网络上都会提到浏览器地址栏输入的参数是有限制的。<br>首先说明一点，http协议没有body和url的长度限制，对url限制的大多是浏览器和服务器的原因。<br>浏览器原因就不说了，服务器是因为处理长url要消耗比较多的资源，为了性能和安全（防止恶意构造长url来攻击）考虑，会给url长度加限制。<p></p>
+<p></p><h5>post方法比get方法安全？</h5><br>有人说post比get安全，因为数据在地址栏上不可见。<br>然而，从传输的角度来说，他们都是不安全的，因为http在网络上是明文传输的，只要在网络节点上捉包，就能完整获取数据报文。<br>要想安全传输，就只有加密，也就是https。<p></p>
+<p></p><h5>post方法会产生两个tcp数据包？</h5><br>有些文章中提到，post会将header和body分开发送，先发送header，服务端返回100状态码再发送body。<br>http协议中没有明确说明post会产生两个tcp数据包，而且实际测试发现，header和body不会分开发送。<p></p>
+<h2 id="所以，header和body分开发送是部分浏览器或者框架的请求方法，不属于post必然行为。"><a href="#所以，header和body分开发送是部分浏览器或者框架的请求方法，不属于post必然行为。" class="headerlink" title="所以，header和body分开发送是部分浏览器或者框架的请求方法，不属于post必然行为。"></a>所以，header和body分开发送是部分浏览器或者框架的请求方法，不属于post必然行为。</h2>
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2019年04月19日 10:56</p>
-        <p>原始链接： <a class="post-url" href="/2019/04/18/5c项目总结/" title="5c项目收获">/2019/04/18/5c项目总结/</a></p>
+        <p>最后更新： 2019年07月04日 18:05</p>
+        <p>原始链接： <a class="post-url" href="/2019/07/04/关于post和get请求/" title="关于post请求和get请求">/2019/07/04/关于post和get请求/</a></p>
         <footer>
             <a href>
                 <img src="/images/logo.png" alt="Miss Zhang">
@@ -208,7 +217,7 @@
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=/2019/04/18/5c项目总结/&title=《5c项目收获》 — 张雯&pic=images/css.png" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=/2019/07/04/关于post和get请求/&title=《关于post请求和get请求》 — 张雯&pic=images/post.jpg" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -218,22 +227,22 @@
             </a>
           </li>
           <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=/2019/04/18/5c项目总结/&title=《5c项目收获》 — 张雯&source=2019年4月上半月参加了5c项目的部分开发工作，项目中用到了z-tree、动态tab页等组件。针对开发过程中遇到的问题、解决思路以及收获做个简单的总结" data-title="QQ">
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=/2019/07/04/关于post和get请求/&title=《关于post请求和get请求》 — 张雯&source=" data-title="QQ">
               <i class="fa fa-qq"></i>
             </a>
           </li>
           <li>
-            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=/2019/04/18/5c项目总结/" data-title="Facebook">
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=/2019/07/04/关于post和get请求/" data-title="Facebook">
               <i class="fa fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《5c项目收获》 — 张雯&url=/2019/04/18/5c项目总结/&via=" data-title="Twitter">
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《关于post请求和get请求》 — 张雯&url=/2019/07/04/关于post和get请求/&via=" data-title="Twitter">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
           <li>
-            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=/2019/04/18/5c项目总结/" data-title="Google+">
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=/2019/07/04/关于post和get请求/" data-title="Google+">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -243,7 +252,7 @@
 <div class="post-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;" id="wxShare-close">×</a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=/2019/04/18/5c项目总结/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=/2019/07/04/关于post和get请求/" alt="微信分享二维码">
 </div>
 
 <div class="mask"></div>
@@ -255,7 +264,7 @@
   <li class="article-footer-tags">
     <i class="fa fa-tags"></i>
       
-    <a href="/tags/项目收获/" class="color5">项目收获</a>
+    <a href="/tags/网络/" class="color3">网络</a>
       
   </li>
 
@@ -268,26 +277,16 @@
 
     <aside class="post-toc-pos post-toc-top" id="post-toc">
         <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#项目中使用的z-tree为3-0-版本"><span class="post-toc-text">项目中使用的z-tree为3.0+版本</span></a></li></ol>
-        </nav>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#undefined"><span class="post-toc-text">get和post区别</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#undefined"><span class="post-toc-text">get、post请求报文上的区别</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#undefined"><span class="post-toc-text">问&amp;&amp;答</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#undefined"><span class="post-toc-text">post方法比get方法安全？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#undefined"><span class="post-toc-text">post方法会产生两个tcp数据包？</span></a></li></ol></li></ol><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#所以，header和body分开发送是部分浏览器或者框架的请求方法，不属于post必然行为。"><span class="post-toc-text">所以，header和body分开发送是部分浏览器或者框架的请求方法，不属于post必然行为。</span></a>
+        </li></nav>
     </aside>
     
 
 <nav id="article-nav">
   
-    <a href="/2019/04/19/将本地代码上传到github的命令/" id="article-nav-newer" class="article-nav-link-wrap">
-
-      <span class="article-nav-title">
-        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
-        
-          常用指令
-        
-      </span>
-    </a>
   
-  
-    <a href="/2019/04/15/基于echarts实现2d以及3d效果的热力数据以及票流数据展示/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">基于echarts实现2d以及3d效果的热力数据以及票流数据展示</span>
+    <a href="/2019/07/04/关于json/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">关于json</span>
       <i class="fa fa-hand-o-right" aria-hidden="true"></i>
     </a>
   
